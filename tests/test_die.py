@@ -28,3 +28,6 @@ class TestDie(unittest.TestCase):
         die = Die(np.asarray([1]))
         self.assertEqual(die.show().index[0], 1)
         self.assertEqual(die.show().weights[1], 1)
+
+if __name__ == '__main__':
+    unittest.main()

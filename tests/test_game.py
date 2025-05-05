@@ -25,3 +25,6 @@ class TestGame(unittest.TestCase):
         self.assertEqual(narrow_df.shape[0], 20)
         self.assertEqual(narrow_df.shape[1], 1)
         self.assertRaises(ValueError, game.show, "True")
+
+if __name__ == '__main__':
+    unittest.main()

@@ -22,7 +22,6 @@ class TestAnalyzer(unittest.TestCase):
         analyzer = Analyzer(game)
         game.play(10)
         face_count_df = analyzer.face_count()
-        print(face_count_df)
         self.assertEqual(face_count_df.shape[0], 10)
         self.assertEqual(face_count_df.shape[1], 3)
     def test_combo_count(self):
@@ -41,3 +40,6 @@ class TestAnalyzer(unittest.TestCase):
         perm_count_df = analyzer.permutation_count()
         perms = perm_count_df['n'].index.to_list()
         self.assertTrue((1, 1) in perms and (1, 2) in perms and (2, 1) in perms and (2, 2) in perms)
+
+if __name__ == '__main__':
+    unittest.main()
